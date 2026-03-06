@@ -1,0 +1,27 @@
+# 환경변수 (API 키)
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 출력 파일
+app/output/*.pdf
+app/output/*.html
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# 테스트 파일
+app/test_*.py
+app/run_test.py
+
+# 소스 PDF (개인정보)
+01_source/

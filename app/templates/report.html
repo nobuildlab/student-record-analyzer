@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ student_name }} - 면접 대비 분석 리포트</title>
+    <style>
+        {{ css }}
+    </style>
+</head>
+<body>
+    <div class="report-container">
+
+        <!-- 표지 -->
+        <div class="cover-page">
+            <h1>면접 대비 분석 리포트</h1>
+            <div class="subtitle">학교생활기록부 기반 분석</div>
+            <div class="student-info">
+                <p><strong>학생:</strong> {{ student_name }}</p>
+                <p><strong>희망 전공:</strong> {{ major }}</p>
+            </div>
+            <div class="brand">노빌드랩</div>
+        </div>
+
+        <!-- PART 1: 핵심 진단 요약 -->
+        <div class="part-header">
+            <div class="part-number">PART 1</div>
+            <h2>핵심 진단 요약</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[1] }}
+        </div>
+
+        <!-- PART 2: 강점·리스크 분석 -->
+        <div class="part-header">
+            <div class="part-number">PART 2</div>
+            <h2>강점·리스크 분석</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[2] }}
+        </div>
+
+        <!-- PART 3: 전략 방향 코멘트 -->
+        <div class="part-header">
+            <div class="part-number">PART 3</div>
+            <h2>전략 방향 코멘트</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[3] }}
+        </div>
+
+        <!-- PART 4: 자기소개 스크립트 -->
+        <div class="part-header">
+            <div class="part-number">PART 4</div>
+            <h2>면접용 자기소개 스크립트</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[4] }}
+        </div>
+
+        <!-- PART 5: 예상질문 + 답변 가이드 -->
+        <div class="part-header">
+            <div class="part-number">PART 5</div>
+            <h2>예상질문 + 답변 가이드</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[5] }}
+        </div>
+
+        <!-- PART 6: 부록 -->
+        <div class="part-header">
+            <div class="part-number">PART 6</div>
+            <h2>부록</h2>
+        </div>
+        <div class="part-content">
+            {{ parts[6] }}
+        </div>
+
+        <!-- 리포트 활용 가이드 (정적 템플릿) -->
+        <div class="part-header">
+            <div class="part-number">GUIDE</div>
+            <h2>이 리포트 활용법</h2>
+        </div>
+        <div class="part-content guide-content">
+            <p class="guide-intro">이 리포트는 읽는 자료가 아니라 <strong>면접 훈련 도구</strong>입니다.<br>아래 5단계를 따라 실전 연습하세요.</p>
+
+            <div class="guide-step">
+                <div class="guide-step-number">STEP 1</div>
+                <h3>내 강점·약점 파악 (10분)</h3>
+                <p>PART 1의 종합 등급표와 PART 2의 강점·리스크를 읽고,<br>
+                <strong>"내 최대 강점 1개"</strong>와 <strong>"면접에서 물어볼 약점 1개"</strong>를 종이에 적어보세요.</p>
+            </div>
+
+            <div class="guide-step">
+                <div class="guide-step-number">STEP 2</div>
+                <h3>자기소개 음독 연습 (20분)</h3>
+                <p>PART 4 설계도를 보면서 <strong>자기 말로</strong> 자기소개를 3회 이상 소리 내어 말해보세요.<br>
+                설계도의 키워드를 참고하되, 문장은 반드시 자기 표현으로 바꾸세요.<br>
+                타이머를 켜고 1분/3분 시간을 체크하세요.</p>
+            </div>
+
+            <div class="guide-step">
+                <div class="guide-step-number">STEP 3</div>
+                <h3>예상 질문 답변 작성 (30분)</h3>
+                <p>PART 5의 질문을 보고, 답변을 <strong>직접 손으로 작성</strong>해보세요.<br>
+                리포트의 답변 구조(①→②→③)를 참고하되, 내용은 본인 경험으로 채우세요.<br>
+                "내 경험 넣기" 빈칸을 반드시 채우세요.</p>
+            </div>
+
+            <div class="guide-step">
+                <div class="guide-step-number">STEP 4</div>
+                <h3>약점 질문 집중 반복 (20분)</h3>
+                <p>PART 5 C카테고리(압박/돌발 질문)를 집중 연습하세요.<br>
+                <strong>"이렇게 답하면 감점"</strong> 예시를 먼저 읽고,<br>
+                <strong>"당황했을 때 대처법"</strong>을 소리 내어 3회 반복하세요.<br>
+                친구나 가족에게 질문을 읽어달라고 하면 더 효과적입니다.</p>
+            </div>
+
+            <div class="guide-step">
+                <div class="guide-step-number">STEP 5</div>
+                <h3>면접 전날 최종 점검 (10분)</h3>
+                <p>PART 6 키워드 맵을 한 번 훑어보세요.<br>
+                면접장에서 머릿속이 하얘질 때, 키워드 하나만 떠올리면 답변이 이어집니다.<br>
+                PART 1의 합격 스토리라인 5줄을 마지막으로 읽고 자신감을 가지세요.</p>
+            </div>
+
+            <div class="guide-tip">
+                <strong>연습 팁</strong><br>
+                <span>완벽한 답변보다 <strong>자기 말로 자연스럽게</strong> 말하는 것이 면접에서 훨씬 좋은 점수를 받습니다.<br>
+                이 리포트의 문장을 외우지 마세요. 구조와 키워드만 기억하고, 나머지는 본인의 언어로 채우세요.<br>
+                답변은 생기부에 적힌 사실을 벗어나지 않는 선에서, 본인의 표현으로 바꿔 말하세요.</span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

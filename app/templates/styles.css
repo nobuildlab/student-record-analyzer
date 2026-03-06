@@ -1,0 +1,286 @@
+/* 생기부 AI 분석 리포트 스타일 — v2 통일 디자인 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11pt;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background: #fff;
+}
+
+.report-container {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ── 표지 ── */
+.cover-page {
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.cover-page h1 {
+    font-size: 28pt;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.cover-page .subtitle {
+    font-size: 16pt;
+    color: #4a5568;
+    margin-bottom: 60px;
+}
+
+.cover-page .student-info {
+    font-size: 14pt;
+    color: #2d3748;
+    line-height: 2.2;
+}
+
+.cover-page .brand {
+    margin-top: 80px;
+    font-size: 11pt;
+    color: #a0aec0;
+}
+
+/* ── PART 헤더 ── */
+.part-header {
+    page-break-before: always;
+    padding: 30px 0 20px;
+    border-bottom: 3px solid #1a365d;
+    margin-bottom: 28px;
+}
+
+.part-header h2 {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #1a365d;
+}
+
+.part-header .part-number {
+    font-size: 12pt;
+    color: #718096;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+/* ── 본문 ── */
+.part-content {
+    padding: 0 10px;
+}
+
+.part-content h3 {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #2b4c7e;
+    margin-top: 32px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #cbd5e0;
+}
+
+.part-content h4 {
+    font-size: 11.5pt;
+    font-weight: 600;
+    color: #3a5a8c;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+.part-content p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.part-content ul, .part-content ol {
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+
+.part-content li {
+    margin-bottom: 4px;
+}
+
+/* ── 표 (통일 디자인: 0.5pt border, 10px+ padding) ── */
+.part-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 10pt;
+    border: 0.5pt solid #cbd5e0;
+}
+
+.part-content th {
+    background-color: #f2f4f7;
+    color: #1a365d;
+    font-weight: 600;
+    padding: 10px 12px;
+    border: 0.5pt solid #cbd5e0;
+    text-align: left;
+}
+
+.part-content td {
+    padding: 10px 12px;
+    border: 0.5pt solid #d0d5dd;
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.part-content tr:nth-child(even) td {
+    background-color: #f9fafb;
+}
+
+.part-content td strong {
+    font-weight: 600;
+    color: #1a365d;
+}
+
+/* ── 인용 블록 ── */
+.part-content blockquote {
+    border-left: 4px solid #4299e1;
+    padding: 12px 16px;
+    margin: 16px 0;
+    background: #ebf8ff;
+    color: #2c5282;
+    font-size: 10.5pt;
+}
+
+/* ── 수평선 (여백 기반 섹션 구분 — 선 제거) ── */
+.part-content hr {
+    border: none;
+    margin: 32px 0;
+}
+
+/* ── 코드 블록 ── */
+.part-content code {
+    background: #edf2f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10pt;
+}
+
+pre {
+    font-family: 'Noto Sans KR', monospace;
+    font-size: 10pt;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-all;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 4px;
+    border: 0.5pt solid #e2e8f0;
+}
+
+/* ── 리포트 활용 가이드 ── */
+.guide-intro {
+    font-size: 11pt;
+    color: #2d3748;
+    margin-bottom: 24px;
+    line-height: 1.8;
+}
+
+.guide-step {
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    background: #f7fafc;
+    border-left: 4px solid #1a365d;
+    border-radius: 0 6px 6px 0;
+}
+
+.guide-step-number {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #fff;
+    background: #1a365d;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.guide-step h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #1a365d;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.guide-step p {
+    font-size: 10.5pt;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.guide-tip {
+    margin-top: 28px;
+    padding: 16px 20px;
+    background: #ebf8ff;
+    border: 0.5pt solid #bee3f8;
+    border-radius: 6px;
+    font-size: 10.5pt;
+    color: #2c5282;
+    line-height: 1.7;
+}
+
+/* ── 면책 조항 ── */
+.disclaimer {
+    margin-top: 40px;
+    padding: 16px 20px;
+    background: #f7fafc;
+    border: 0.5pt solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 9.5pt;
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* ── 체크박스 리스트 (PART 6 체크리스트) ── */
+.part-content ul li {
+    list-style: none;
+}
+
+/* ── 인쇄 최적화 ── */
+@media print {
+    body {
+        font-size: 10.5pt;
+    }
+
+    .part-header {
+        page-break-before: always;
+    }
+
+    .part-content table {
+        page-break-inside: avoid;
+    }
+
+    .part-content blockquote {
+        page-break-inside: avoid;
+    }
+
+    .part-content h3,
+    .part-content h4 {
+        page-break-after: avoid;
+    }
+}
