@@ -24,6 +24,9 @@ def compile_report(
     for num, text in parts.items():
         cleaned = _remove_evidence_block(text)
         cleaned = _fix_score_format(cleaned)
+        # ── LLM 사과 표현 제거 ──
+        cleaned = re.sub(r'^(죄송합니다[.。]?\s*)', '', cleaned)
+        cleaned = re.sub(r'^(아래는\s+.*?분석입니다[.。]?\s*)', '', cleaned)
         # ── 확정 표현 완곡화 (보호 블록 전 선처리) ──
         cleaned = cleaned.replace("답변이 가능합니다", "답변이 가능할 것으로 보입니다")
         cleaned = cleaned.replace("어필할 수 있습니다", "어필할 수 있을 것으로 보입니다")
