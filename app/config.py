@@ -5,7 +5,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ── API 설정 ──
+# Streamlit Cloud: st.secrets에서 읽기 (로컬: .env에서 읽기)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    try:
+        import streamlit as st
+        OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY")
+    except Exception:
+        pass
 MODEL = "gpt-4o"
 REVIEW_MODEL = "gpt-4o-mini"
 
